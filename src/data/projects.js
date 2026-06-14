@@ -43,8 +43,8 @@ export const projects = [
     title: 'Heal-X',
     subtitle: 'Healthcare Management System',
     description: 'Full-stack healthcare management system for appointments, billing, and medical records with QR-based patient identification and Tesseract OCR for prescriptions.',
-    longDescription: 'MERN stack healthcare platform featuring JWT role management, QR-based patient identification, and Tesseract OCR for handwritten prescription digitization. Includes real-time dashboards for inventory and financial management.',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Tesseract OCR'],
+    longDescription: 'MERN stack healthcare platform featuring JWT role management, QR-based patient identification, and Tesseract OCR for handwritten prescription digitization. Prescription images are uploaded and stored per-patient in Google Cloud Storage (healx-prescriptions bucket), organized by patient ID for secure, scalable retrieval. Includes real-time dashboards for inventory and financial management.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Tesseract OCR', 'Google Cloud Storage'],
     category: 'Full Stack',
     featured: false,
     link: 'https://github.com/GayathDahanayaka/ITP-Project',
@@ -100,6 +100,7 @@ export const skills = {
   'Mobile': ['Flutter', 'Kotlin', 'Android Development'],
   'Databases': ['MongoDB', 'MySQL', 'SQLite'],
   'Tools': ['Git', 'GitHub', 'Postman', 'Android Studio'],
+  'Cloud': ['Google Cloud Storage'],
   'AI & CV': ['OpenCV', 'Tesseract OCR', 'Python ML'],
 };
 

@@ -303,6 +303,7 @@ function Skills() {
     'Databases': 'text-orange-400 border-orange-500/30 bg-orange-500/5',
     'Tools': 'text-pink-400 border-pink-500/30 bg-pink-500/5',
     'AI & CV': 'text-teal-400 border-teal-500/30 bg-teal-500/5',
+    'Cloud': 'text-sky-400 border-sky-500/30 bg-sky-500/5',
   };
 
   return (
