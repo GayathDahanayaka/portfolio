@@ -6,7 +6,7 @@ export const projects = [
     description: 'Automated OMR grading platform achieving 95%+ grading accuracy using computer vision. Features adaptive thresholding, perspective correction, and circle detection.',
     longDescription: 'Built a complete OMR grading system that processes scanned answer sheets with adaptive thresholding and perspective correction. Includes analytics dashboards, Excel export, and a cross-platform Flutter mobile app for teachers.',
     stack: ['Python', 'OpenCV', 'Flask', 'Flutter', 'SQLite'],
-    category: 'AI / Computer Vision',
+    category: 'AI / Computer Vision · Mobile',
     featured: true,
     link: 'https://github.com/GayathDahanayaka/MCQ-Grader-App',
     color: 'from-cyan-500 to-blue-600',
@@ -43,8 +43,8 @@ export const projects = [
     title: 'Heal-X',
     subtitle: 'Healthcare Management System',
     description: 'Full-stack healthcare management system for appointments, billing, and medical records with QR-based patient identification and Tesseract OCR for prescriptions.',
-    longDescription: 'MERN stack healthcare platform featuring JWT role management, QR-based patient identification, and Tesseract OCR for handwritten prescription digitization. Includes real-time dashboards for inventory and financial management.',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Tesseract OCR'],
+    longDescription: 'MERN stack healthcare platform featuring JWT role management, QR-based patient identification, and Tesseract OCR for handwritten prescription digitization. Prescription images are uploaded and stored per-patient in Google Cloud Storage (healx-prescriptions bucket), organized by patient ID for secure, scalable retrieval. Includes real-time dashboards for inventory and financial management.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Tesseract OCR', 'Google Cloud Storage'],
     category: 'Full Stack',
     featured: false,
     link: 'https://github.com/GayathDahanayaka/ITP-Project',
@@ -100,6 +100,7 @@ export const skills = {
   'Mobile': ['Flutter', 'Kotlin', 'Android Development'],
   'Databases': ['MongoDB', 'MySQL', 'SQLite'],
   'Tools': ['Git', 'GitHub', 'Postman', 'Android Studio'],
+  'Cloud': ['Google Cloud Storage'],
   'AI & CV': ['OpenCV', 'Tesseract OCR', 'Python ML'],
 };
 

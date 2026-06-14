@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import profileImg from './assets/profile.jpeg';
 import { projects, skills, certifications } from './data/projects';
 
 /* ─── Scroll animation hook ─── */
@@ -110,34 +111,34 @@ function Hero() {
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
           {/* Text */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-3">
+          <div className="space-y-5 text-center lg:text-left">
+            <div className="flex items-center justify-center gap-3 lg:justify-start">
               <span className="h-px w-12 bg-gradient-to-r from-cyan-500 to-transparent" />
-              <span className="font-mono text-sm text-cyan-400 tracking-widest uppercase">Available for Internship</span>
+              <span className="font-mono text-xs text-cyan-400 tracking-widest uppercase sm:text-sm">Available for Internship</span>
             </div>
 
             <div>
-              <h1 className="text-5xl font-black leading-[1.1] sm:text-6xl lg:text-7xl">
+              <h1 className="text-4xl font-black leading-[1.1] sm:text-5xl lg:text-7xl">
                 <span className="block text-white">Hi, I'm</span>
                 <span className="block gradient-text">Gayath</span>
                 <span className="block text-white">Dahanayaka</span>
               </h1>
             </div>
 
-            <p className="max-w-xl text-lg text-slate-400 leading-relaxed">
+            <p className="text-base text-slate-400 leading-relaxed sm:text-lg">
               Full Stack Developer · AI Enthusiast · Mobile Developer
             </p>
-            <p className="max-w-xl text-slate-500 leading-relaxed">
+            <p className="text-sm text-slate-500 leading-relaxed sm:text-base">
               3rd-year Software Engineering undergraduate at SLIIT, building scalable web apps,
               mobile solutions, and AI-powered systems with clean, maintainable code.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-2">
+            <div className="flex flex-wrap justify-center gap-3 pt-2 lg:justify-start">
               <a
                 href="#projects"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all hover:scale-105 hover:shadow-cyan-500/40"
+                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all hover:scale-105 hover:shadow-cyan-500/40"
               >
                 View My Work
                 <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -146,14 +147,14 @@ function Hero() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-7 py-3.5 text-sm font-semibold text-slate-300 backdrop-blur-sm transition-all hover:border-cyan-500/50 hover:bg-cyan-500/5 hover:text-cyan-400"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-300 backdrop-blur-sm transition-all hover:border-cyan-500/50 hover:bg-cyan-500/5 hover:text-cyan-400"
               >
                 Get In Touch
               </a>
             </div>
 
             {/* Social links */}
-            <div className="flex items-center gap-4 pt-2">
+            <div className="flex items-center justify-center gap-4 pt-2 lg:justify-start">
               <a
                 href="https://github.com/GayathDahanayaka"
                 target="_blank"
@@ -189,24 +190,24 @@ function Hero() {
           </div>
 
           {/* Profile card */}
-          <div className="relative mx-auto animate-float lg:mx-0">
+          <div className="relative mx-auto animate-float w-fit lg:mx-0">
             <div className="gradient-border relative rounded-3xl p-0.5">
-              <div className="rounded-3xl bg-[#0F0F1A] p-6">
-                <div className="relative h-72 w-64 overflow-hidden rounded-2xl sm:h-80 sm:w-72">
+              <div className="rounded-3xl bg-[#0F0F1A] p-4 sm:p-6">
+                <div className="relative h-56 w-48 overflow-hidden rounded-2xl sm:h-72 sm:w-60 lg:h-80 lg:w-72">
                   <img
-                    src="/profile.jpeg"
+                    src={profileImg}
                     alt="Gayath Dahanayaka"
                     className="h-full w-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F1A]/60 to-transparent" />
                 </div>
-                {/* Floating stat badges */}
-                <div className="absolute -right-4 top-8 rounded-xl border border-white/10 bg-[#0F0F1A] px-4 py-2.5 shadow-xl">
-                  <p className="font-mono text-2xl font-bold text-cyan-400">7+</p>
+                {/* Floating stat badges — hidden on very small screens */}
+                <div className="absolute -right-3 top-6 rounded-xl border border-white/10 bg-[#0F0F1A] px-3 py-2 shadow-xl sm:-right-4 sm:top-8 sm:px-4 sm:py-2.5">
+                  <p className="font-mono text-lg font-bold text-cyan-400 sm:text-2xl">7+</p>
                   <p className="text-xs text-slate-500">Projects</p>
                 </div>
-                <div className="absolute -left-4 bottom-16 rounded-xl border border-white/10 bg-[#0F0F1A] px-4 py-2.5 shadow-xl">
-                  <p className="font-mono text-2xl font-bold text-purple-400">95%+</p>
+                <div className="absolute -left-3 bottom-12 rounded-xl border border-white/10 bg-[#0F0F1A] px-3 py-2 shadow-xl sm:-left-4 sm:bottom-16 sm:px-4 sm:py-2.5">
+                  <p className="font-mono text-lg font-bold text-purple-400 sm:text-2xl">95%+</p>
                   <p className="text-xs text-slate-500">OMR Accuracy</p>
                 </div>
               </div>
@@ -231,14 +232,14 @@ function Hero() {
 /* ─── About Section ─── */
 function About() {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="section-animate grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div className="section-animate grid gap-10 lg:grid-cols-2 lg:items-center">
           {/* Left: text */}
-          <div className="space-y-6">
+          <div className="space-y-5">
             <div>
               <p className="font-mono text-sm text-cyan-400 tracking-widest uppercase">About Me</p>
-              <h2 className="mt-3 text-4xl font-black text-white">
+              <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
                 Passionate about building <span className="gradient-text">meaningful software</span>
               </h2>
             </div>
@@ -303,22 +304,23 @@ function Skills() {
     'Databases': 'text-orange-400 border-orange-500/30 bg-orange-500/5',
     'Tools': 'text-pink-400 border-pink-500/30 bg-pink-500/5',
     'AI & CV': 'text-teal-400 border-teal-500/30 bg-teal-500/5',
+    'Cloud': 'text-sky-400 border-sky-500/30 bg-sky-500/5',
   };
 
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="section-animate text-center mb-14">
+        <div className="section-animate text-center mb-10 sm:mb-14">
           <p className="font-mono text-sm text-cyan-400 tracking-widest uppercase">Technical Skills</p>
-          <h2 className="mt-3 text-4xl font-black text-white">
+          <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
             Technologies I <span className="gradient-text">work with</span>
           </h2>
-          <p className="mt-4 text-slate-400 max-w-xl mx-auto">
+          <p className="mt-4 text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
             A diverse toolkit spanning full-stack development, mobile, AI, and modern software architecture.
           </p>
         </div>
 
-        <div className="section-animate grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="section-animate grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
           {Object.entries(skills).map(([category, items]) => {
             const colorClass = skillColors[category] || 'text-slate-400 border-slate-500/30 bg-slate-500/5';
             return (
@@ -429,28 +431,28 @@ function ProjectCard({ project, index }) {
 function Projects() {
   const [filter, setFilter] = useState('All');
   const categories = ['All', 'Full Stack', 'Mobile', 'AI / Computer Vision'];
-  const filtered = filter === 'All' ? projects : projects.filter((p) => p.category === filter);
+  const filtered = filter === 'All' ? projects : projects.filter((p) => p.category.includes(filter));
 
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="section-animate text-center mb-12">
+        <div className="section-animate text-center mb-10 sm:mb-12">
           <p className="font-mono text-sm text-cyan-400 tracking-widest uppercase">Portfolio</p>
-          <h2 className="mt-3 text-4xl font-black text-white">
+          <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
             Projects built for <span className="gradient-text">real impact</span>
           </h2>
-          <p className="mt-4 text-slate-400 max-w-xl mx-auto">
+          <p className="mt-4 text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
             From healthcare platforms to AI-powered grading systems — each project solves a real-world problem.
           </p>
         </div>
 
         {/* Filter tabs */}
-        <div className="section-animate mb-10 flex flex-wrap justify-center gap-2">
+        <div className="section-animate mb-8 sm:mb-10 flex flex-wrap justify-center gap-2">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-all ${
+              className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-all sm:px-4 sm:text-sm ${
                 filter === cat
                   ? 'border-cyan-500/50 bg-cyan-500/10 text-cyan-400 shadow-lg shadow-cyan-500/10'
                   : 'border-white/10 bg-white/3 text-slate-400 hover:border-white/20 hover:text-slate-300'
@@ -461,7 +463,7 @@ function Projects() {
           ))}
         </div>
 
-        <div className="section-animate grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="section-animate grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {filtered.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
@@ -474,11 +476,11 @@ function Projects() {
 /* ─── Certifications Section ─── */
 function Certifications() {
   return (
-    <section id="certifications" className="py-24">
+    <section id="certifications" className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="section-animate text-center mb-14">
+        <div className="section-animate text-center mb-10 sm:mb-14">
           <p className="font-mono text-sm text-cyan-400 tracking-widest uppercase">Credentials</p>
-          <h2 className="mt-3 text-4xl font-black text-white">
+          <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
             Certifications & <span className="gradient-text">Education</span>
           </h2>
         </div>
@@ -533,9 +535,9 @@ function Certifications() {
 /* ─── Contact Section ─── */
 function Contact() {
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="section-animate relative overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-br from-white/3 to-transparent p-8 lg:p-14">
+        <div className="section-animate relative overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br from-white/3 to-transparent p-6 sm:rounded-3xl sm:p-8 lg:p-14">
           {/* Background glow */}
           <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-purple-500/10 blur-3xl" />
@@ -544,7 +546,7 @@ function Contact() {
             <div className="space-y-6">
               <div>
                 <p className="font-mono text-sm text-cyan-400 tracking-widest uppercase">Get In Touch</p>
-                <h2 className="mt-3 text-4xl font-black text-white">
+                <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
                   Let's build something <span className="gradient-text">great together</span>
                 </h2>
               </div>
