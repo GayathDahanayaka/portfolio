@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import profileImg from './assets/profile.jpeg';
 import { projects, skills, certifications } from './data/projects';
 
 /* ─── Scroll animation hook ─── */
@@ -194,7 +195,7 @@ function Hero() {
               <div className="rounded-3xl bg-[#0F0F1A] p-4 sm:p-6">
                 <div className="relative h-56 w-48 overflow-hidden rounded-2xl sm:h-72 sm:w-60 lg:h-80 lg:w-72">
                   <img
-                    src="/profile.jpeg"
+                    src={profileImg}
                     alt="Gayath Dahanayaka"
                     className="h-full w-full object-cover object-top"
                   />
