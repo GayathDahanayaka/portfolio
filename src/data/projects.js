@@ -6,7 +6,7 @@ export const projects = [
     description: 'Automated OMR grading platform achieving 95%+ grading accuracy using computer vision. Features adaptive thresholding, perspective correction, and circle detection.',
     longDescription: 'Built a complete OMR grading system that processes scanned answer sheets with adaptive thresholding and perspective correction. Includes analytics dashboards, Excel export, and a cross-platform Flutter mobile app for teachers.',
     stack: ['Python', 'OpenCV', 'Flask', 'Flutter', 'SQLite'],
-    category: 'AI / Computer Vision',
+    category: 'AI / Computer Vision · Mobile',
     featured: true,
     link: 'https://github.com/GayathDahanayaka/MCQ-Grader-App',
     color: 'from-cyan-500 to-blue-600',
